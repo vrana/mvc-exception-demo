@@ -1,0 +1,11 @@
+Options -Indexes
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+RewriteEngine On
+
+RewriteRule !^(favicon\.ico|index\.php|static/.+)$ index.php [L]
+
+php_value default_charset utf-8
+php_value date.timezone Europe/Prague
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off

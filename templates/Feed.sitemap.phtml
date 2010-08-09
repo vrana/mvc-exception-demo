@@ -1,0 +1,10 @@
+{contentType application/xml; charset=utf-8}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{foreach $items as $item}
+	<url>
+		{foreach $item as $key => $value}
+		<{!$key}>{$value}</{!$key}>
+		{/foreach}
+	</url>
+	{/foreach}
+</urlset>
