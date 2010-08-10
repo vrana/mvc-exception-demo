@@ -1,6 +1,6 @@
 <?php
 class Article {
 	static function findBests() {
-		return dibi::query("SELECT * FROM [article] WHERE [best]")->fetchAll();
+		return dibi::fetchAll("SELECT * FROM [article] WHERE [best]");
 	}
 }
