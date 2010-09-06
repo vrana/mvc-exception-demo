@@ -1,6 +1,12 @@
 <?php
-class Article {
+include __DIR__ . "/BaseModel.php";
+
+class Article extends BaseModel {
+	/**
+	* @return array
+	* @throws DataSourceException
+	*/
 	static function findBests() {
-		return dibi::fetchAll("SELECT * FROM [article] WHERE [best]");
+		return self::tryFetchAll("SELEC * FROM [article] WHERE [best]");
 	}
 }

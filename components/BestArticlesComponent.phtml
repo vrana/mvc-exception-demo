@@ -1,0 +1,8 @@
+{if !empty($bestArticles)}
+	<h3><a href="{plink Article:bests}">Výběr článků</a></h3>
+	<ul>
+	{foreach $bestArticles as $article}
+		<li><a href="{plink Article:detail $article->id}">{$article->title}</a></li>
+	{/foreach}
+	</ul>
+{/if}
