@@ -1,11 +1,13 @@
 <?php
 
-class TryControl extends Control {
+abstract class TryControl extends Control {
+	abstract function getData();
+	
 	function render() {
 		try {
 			$this->getData();
 			$this->template->setFile(__DIR__ . "/" . get_class($this) . ".phtml")->render();
-		} catch (Exception $e) {
+		} catch (DataSourceException $e) {
 		}
 	}
 }

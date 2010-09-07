@@ -7,6 +7,6 @@ class Article extends BaseModel {
 	* @throws DataSourceException
 	*/
 	static function findBests() {
-		return self::tryFetchAll("SELEC * FROM [article] WHERE [best]");
+		return self::tryFetchAll("SELECT * FROM [article] WHERE [best]");
 	}
 }
